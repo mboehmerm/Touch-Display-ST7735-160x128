@@ -1,23 +1,24 @@
-# Touch Display ST7735 1.8" 160x128
+# SPI Touch Display ST7735 1.8" 160x128
 
-Aliexpress Display used with ESP32 DevKitC V4 and Arduino IDE 2.0.4
+Aliexpress Display i used with a ESP32 DevKitC V4 and Arduino IDE 2.0.4
 
 ![Touch_Display_1 8_SD](https://user-images.githubusercontent.com/106549358/229093910-0fbed4b9-aa86-4fae-a7b2-e4387fc9263f.png)
 
 # Connections for ESP32 DevKitC V4
-|             | GPIO | TFT   | Touch | SD-Card |
-| :---------- | ---: | :---- | :---- | :------ |
-| MOSI        | 23   | SDA   | T_DIN | SD_MOSI |
-| MISO        | 19   |       | T_DO  | SD_MISO |
-| CLK         | 18   | SCK   | T-CLK | SD_SCK  |
-| DC          |  2   | SDA   |       |         |
-| RST         | EN   | RESET |       |         |
-| CS  (TFT)   | 15   | CS    |       |         |
-| CS  (SD)    |  5   |       |       | SD_CS   |
-| CS  (Touch) |  4   |       | T_CS  |         |
-| GND         |      | GND   |       |         |
-| 3.3V        |      | VCC   |       |         |
-| 3.3V        |      | LED   |       |         |
+|                | GPIO | TFT   | Touch | SD-Card |
+| :------------- | ---: | :---- | :---- | :------ |
+| MOSI           | 23   | SDA   | T_DIN | SD_MOSI |
+| MISO           | 19   |       | T_DO  | SD_MISO |
+| CLK            | 18   | SCK   | T-CLK | SD_SCK  |
+| DC             |  2   | SDA   |       |         |
+| RST            | EN   | RESET |       |         |
+| CS  (TFT)      | 15   | CS    |       |         |
+| CS  (SD)       |  5   |       |       | SD_CS   |
+| CS  (Touch)    |  4   |       | T_CS  |         |
+| IRQ (not used) |      |       | T_IRQ |         |
+| GND            |      | GND   |       |         |
+| 3.3V           |      | VCC   |       |         |
+| 3.3V           |      | LED   |       |         |
 
 # Configure the Library TFT_eSPI
 - Edit the file : Arduino\TFT_eSPI\User_Setup.h
@@ -124,7 +125,7 @@ public:
       cfg.x_max      = 127;
       cfg.y_min      =   0;
       cfg.y_max      = 159;
-      //cfg.pin_int    = -1;
+    //cfg.pin_int    =  -1;
       cfg.bus_shared = true;
       cfg.offset_rotation = 0;
 
@@ -138,8 +139,26 @@ public:
 # ConfigureLVGL 8.3.3 
 - Create the file : Arduino\libraries\TFT_eSPI\lv_conf.h
 - Unzip the Arduino\libraries\lvgl.zip to Arduino\libraries\lvgl
-- 
 - Test : LVGL_Arduino_Test.ino
 
+Changes in the LVGL are :
+```
+#if 1 /*Set it to "1" to enable content*/
+#define LV_COLOR_DEPTH 16
+#define LV_TICK_CUSTOM 1         // Touch works only with 1
+#define LV_USE_LOG 1             // See LVGL-warnings in the serial monitor
+#define LV_FONT_MONTSERRAT_8  1  // small fonts for the small display
+#define LV_FONT_MONTSERRAT_10 1
+#define LV_FONT_MONTSERRAT_12 1
+#define LV_FONT_DEFAULT &lv_font_montserrat_10
+#define LV_USE_DEMO_WIDGETS 1
+#define LV_DEMO_WIDGETS_SLIDESHOW 1
+#define LV_USE_DEMO_KEYPAD_AND_ENCODER 1
+#define LV_USE_DEMO_BENCHMARK 1
+```
 
-Download : http://www.jczn1688.com/zlxz?spm=a2g0o.detail.1000023.1.16c569f0Ex1SqQ
+The LVGL library, i used and modified can be found in the file Arduino\libraries\lvgl.zip or downloaded in the Link below. 
+
+Download from : http://www.jczn1688.com/zlxz?spm=a2g0o.detail.1000023.1.16c569f0Ex1SqQ
+
+File : "2.8inch_ESP32-2432S028R.zip"
