@@ -121,7 +121,7 @@ public:
 
       auto cfg = _touch_instance.config();
 
-      cfg.x_min      =   0;    // doesn't work
+      cfg.x_min      =   0;    // numbers doesn't work
       cfg.x_max      = 127;
       cfg.y_min      =   0;
       cfg.y_max      = 159;
