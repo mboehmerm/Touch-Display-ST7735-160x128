@@ -12,6 +12,7 @@
 //----------------------------------------------------------------------------------------------------
 
 // This modified program uses TFT, Touch, SD and LittleFS
+// Original: Arduino\libraries\TFT_eSPI\examples\Generic\ESP32_SDcard_jpeg\ESP32_SDcard_jpeg.ino
 
 // Four jpg-files are loaded from SD (and spiffs) ande shown on the TFT. Press touch to repeat.
 // Serial montior shows data of the jpg-files and listing of the files on spiffs
