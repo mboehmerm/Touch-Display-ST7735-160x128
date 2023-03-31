@@ -1,6 +1,6 @@
-# SPI Touch Display ST7735 1.8" 160x128
+# SPI Touch Display ST7735 1.8" 160x128 XPT2046
 
-Aliexpress Display i used with a ESP32 DevKitC V4 and Arduino IDE 2.0.4
+Aliexpress Display ~5€, used with a ESP32 DevKitC V4 and Arduino IDE 2.0.4
 
 ![Touch_Display_1 8_SD](pictures/Touch_Display_1.8_SD.png)
 
@@ -29,6 +29,7 @@ Sharing SPI MOSI, MISO and CLK, so you need only 11 or 12 Pin's.
 
 ![Touch_Display_1 8_SD](pictures/TFT_graphicstest_PDQ3_Touch.jpg)
 
+Arduino\TFT_eSPI\User_Setup.h :
 ```
 #define USER_SETUP_INFO "User_Setup"
 
@@ -69,6 +70,7 @@ Sharing SPI MOSI, MISO and CLK, so you need only 11 or 12 Pin's.
 
 ![Touch_Display_1 8_SD](pictures/Lovyan_Touch_Test_02.jpg)
 
+LGFX_ESP32_ST7735S.hpp :
 ```
 #pragma once
 
@@ -150,7 +152,7 @@ public:
 
 ![Touch_Display_1 8_SD](pictures/LVGL_Widgets.jpg)
 
-Changes in the LVGL are :
+Changed in Arduino\libraries\TFT_eSPI\lv_conf.h :
 ```
 #if 1 /*Set it to "1" to enable content*/
 #define LV_COLOR_DEPTH 16
