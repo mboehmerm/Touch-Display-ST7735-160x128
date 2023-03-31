@@ -2,7 +2,7 @@
 
 Aliexpress Display i used with a ESP32 DevKitC V4 and Arduino IDE 2.0.4
 
-![Touch_Display_1 8_SD](https://user-images.githubusercontent.com/106549358/229093910-0fbed4b9-aa86-4fae-a7b2-e4387fc9263f.png)
+![Touch_Display_1 8_SD](pictures/Touch_Display_1.8_SD.png)
 
 # Connections for ESP32 DevKitC V4
 |                | GPIO | TFT   | Touch | SD-Card |
@@ -23,6 +23,8 @@ Aliexpress Display i used with a ESP32 DevKitC V4 and Arduino IDE 2.0.4
 # Configure the Library TFT_eSPI
 - Edit the file : Arduino\TFT_eSPI\User_Setup.h
 - Test : TFT_graphicstest_PDQ3_Touch.ino
+
+![Touch_Display_1 8_SD](pictures/TFT_graphicstest_PDQ3_Touch.jpg)
 
 ```
 #define USER_SETUP_INFO "User_Setup"
@@ -61,6 +63,8 @@ Aliexpress Display i used with a ESP32 DevKitC V4 and Arduino IDE 2.0.4
 # Configure the Library LovyanGFX
 - Create the new file : Arduino\LovyanGFX\User_Setup.h\src\LGFX_ESP32_ST7735S.hpp
 - Test : Lovyan_Touch_Test.ino and TFT_graphicstest_PDQ3_Touch.ino
+
+![Touch_Display_1 8_SD](pictures/Lovyan_Touch_Test_02.jpg)
 
 ```
 #pragma once
@@ -140,6 +144,8 @@ public:
 - Create the file : Arduino\libraries\TFT_eSPI\lv_conf.h
 - Unzip the Arduino\libraries\lvgl.zip to Arduino\libraries\lvgl
 - Test : LVGL_Arduino_Test.ino
+
+![Touch_Display_1 8_SD](pictures/LVGL_Widgets.jpg)
 
 Changes in the LVGL are :
 ```
