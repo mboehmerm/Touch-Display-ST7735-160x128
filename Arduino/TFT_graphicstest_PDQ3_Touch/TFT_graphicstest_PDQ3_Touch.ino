@@ -13,10 +13,11 @@
  ###### DON'T FORGET TO UPDATE THE User_Setup.h FILE IN THE LIBRARY ######
  #########################################################################
  
- new: press touch to repeat test
+press touch to repeat test
+
  */
 
-//#define Lovyan
+//#define Lovyan                     // works with Bodmer's TFT_eSPI or LovyanGFX !!!
 #ifdef Lovyan
   #include <LGFX_ESP32_ST7735S.hpp>  // works wi
   #include <LGFX_TFT_eSPI.hpp>
