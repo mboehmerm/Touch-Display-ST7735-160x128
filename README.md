@@ -1,6 +1,6 @@
 # Touch Display ST7735 1.8" 160x128
 
-Aliexpress Display
+Aliexpress Display with ESP32 DevKitC V4
 
 ![Touch_Display_1 8_SD](https://user-images.githubusercontent.com/106549358/229093910-0fbed4b9-aa86-4fae-a7b2-e4387fc9263f.png)
 
