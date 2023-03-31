@@ -1,6 +1,6 @@
 # Touch Display ST7735 1.8" 160x128
 
-Aliexpress Display with ESP32 DevKitC V4
+Aliexpress Display used with ESP32 DevKitC V4 and Arduino IDE 2.0.4
 
 ![Touch_Display_1 8_SD](https://user-images.githubusercontent.com/106549358/229093910-0fbed4b9-aa86-4fae-a7b2-e4387fc9263f.png)
 
@@ -20,7 +20,8 @@ Aliexpress Display with ESP32 DevKitC V4
 | 3.3V        |      | LED   |       |         |
 
 # Configure the Library TFT_eSPI
-Edit the file : C:\users\<username>\Documents\Arduino\TFT_eSPI\User_Setup.h
+- Edit the file : Arduino\TFT_eSPI\User_Setup.h
+- Test : TFT_graphicstest_PDQ3_Touch.ino
 
 ```
 #define USER_SETUP_INFO "User_Setup"
@@ -47,7 +48,8 @@ Edit the file : C:\users\<username>\Documents\Arduino\TFT_eSPI\User_Setup.h
 #define LOAD_FONT6
 #define LOAD_FONT7
 #define LOAD_FONT8
-#define LOAD_GFXFFfree fonts FF1 to FF48 and custom fonts
+//#define LOAD_FONT8N
+#define LOAD_GFXFF
 #define SMOOTH_FONT
 
 //Other options
@@ -56,7 +58,8 @@ Edit the file : C:\users\<username>\Documents\Arduino\TFT_eSPI\User_Setup.h
 #define SPI_TOUCH_FREQUENCY  2500000
 ```
 # Configure the Library LovyanGFX
-Create the new file : Arduino\LovyanGFX\User_Setup.h\src\LGFX_ESP32_ST7735S.hpp
+- Create the new file : Arduino\LovyanGFX\User_Setup.h\src\LGFX_ESP32_ST7735S.hpp
+- Test : Lovyan_Touch_Test.ino and TFT_graphicstest_PDQ3_Touch.ino
 
 ```
 #pragma once
@@ -132,3 +135,11 @@ public:
   }
 };
 ```
+# ConfigureLVGL 8.3.3 
+- Create the file : Arduino\libraries\TFT_eSPI\lv_conf.h
+- Unzip the Arduino\libraries\lvgl.zip to Arduino\libraries\lvgl
+- 
+- Test : LVGL_Arduino_Test.ino
+
+
+Download : http://www.jczn1688.com/zlxz?spm=a2g0o.detail.1000023.1.16c569f0Ex1SqQ
