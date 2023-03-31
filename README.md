@@ -5,6 +5,9 @@ Aliexpress Display i used with a ESP32 DevKitC V4 and Arduino IDE 2.0.4
 ![Touch_Display_1 8_SD](pictures/Touch_Display_1.8_SD.png)
 
 # Connections for ESP32 DevKitC V4
+
+Sharing SPI MOSI, MISO and CLK, so you need only 11 or 12 Pin's.
+
 |                | GPIO | TFT   | Touch | SD-Card |
 | :------------- | ---: | :---- | :---- | :------ |
 | MOSI           | 23   | SDA   | T_DIN | SD_MOSI |
