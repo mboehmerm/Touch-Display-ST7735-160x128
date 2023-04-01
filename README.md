@@ -1,6 +1,8 @@
 # SPI Touch Display ST7735 1.8" 160x128 XPT2046
 
-Aliexpress Display ~5€, used with a ESP32 DevKitC V4 and Arduino IDE 2.0.4
+Aliexpress Display ~5€, tested with a ESP32 DevKitC V4 and Arduino IDE 2.0.4
+
+Works with TFT_eSPI by Bodmer, LovyanGFX and LVGL 8.3.3
 
 ![Touch_Display_1 8_SD](pictures/Touch_Display_1.8_SD.png)
 
@@ -169,8 +171,6 @@ Changed in Arduino\libraries\TFT_eSPI\lv_conf.h :
 #define LV_USE_DEMO_BENCHMARK 1
 ```
 
-The LVGL library, i used and modified can be found in the file Arduino\libraries\lvgl.zip or downloaded in the Link below. 
+The LVGL library, i used and modified can be downloaded from the link below. It contains the first LVGL_Arduino.ino that I got working without major modifications. Or use the modified library in Arduino/libraries/lvgl.zip.
 
-Download from : http://www.jczn1688.com/zlxz?spm=a2g0o.detail.1000023.1.16c569f0Ex1SqQ
-
-File : "2.8inch_ESP32-2432S028R.zip"
+Download "2.8inch_ESP32-2432S028R.zip" from : http://pan.jczn1688.com/directlink/1/ESP32%20module/2.8inch_ESP32-2432S028R.rar?spm=a2g0o.detail.1000023.1.6e8869f0pW0rBB&file=2.8inch_ESP32-2432S028R.rar
