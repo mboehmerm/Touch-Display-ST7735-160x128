@@ -157,7 +157,7 @@ public:
 
 Changed in Arduino\libraries\TFT_eSPI\lv_conf.h :
 ```
-#if 1 /*Set it to "1" to enable content*/
+#if 1                  /*Set it to "1" to enable content*/
 #define LV_COLOR_DEPTH 16
 #define LV_TICK_CUSTOM 1         // Touch works only with 1
 #define LV_USE_LOG 1             // See LVGL-warnings in the serial monitor
