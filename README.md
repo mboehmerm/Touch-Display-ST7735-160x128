@@ -30,7 +30,7 @@ Sharing SPI MOSI, MISO and CLK, so you need only 11 or 12 Pin's.
 - Test : TFT_graphicstest_PDQ3_Touch.ino (works with TFT_eSPI or LovyanGFX)
 - Test : LittleFS_SDcard_Touch_Jpeg_Test.ino
 
-![Touch_Display_1 8_SD](pictures/TFT_graphicstest_PDQ3_Touch.jpg)
+![TFT_eSPI](pictures/TFT_graphicstest_PDQ3_Touch.jpg)
 
 Arduino\TFT_eSPI\User_Setup.h :
 ```
@@ -71,7 +71,7 @@ Arduino\TFT_eSPI\User_Setup.h :
 - Create the new file : Arduino\LovyanGFX\User_Setup.h\src\LGFX_ESP32_ST7735S.hpp
 - Test : Lovyan_Touch_Test.ino and TFT_graphicstest_PDQ3_Touch.ino
 
-![Touch_Display_1 8_SD](pictures/Lovyan_Touch_Test_02.jpg)
+![LovyanGFX](pictures/Lovyan_Touch_Test_02.jpg)
 
 LGFX_ESP32_ST7735S.hpp :
 ```
@@ -148,12 +148,12 @@ public:
   }
 };
 ```
-# ConfigureLVGL 8.3.3 
+# Configure LVGL 8.3.3 
 - Create the file : Arduino\libraries\TFT_eSPI\lv_conf.h
 - Unzip the Arduino\libraries\lvgl.zip to Arduino\libraries\lvgl
 - Test : LVGL_Arduino_Test.ino
 
-![Touch_Display_1 8_SD](pictures/LVGL_Widgets.jpg)
+![LVGL](pictures/LVGL_Widgets.jpg)
 
 Changed in Arduino\libraries\TFT_eSPI\lv_conf.h :
 ```
