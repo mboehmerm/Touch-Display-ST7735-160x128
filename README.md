@@ -159,7 +159,7 @@ public:
 
 Changes in Arduino\libraries\TFT_eSPI\lv_conf.h :
 ```java
-#if 1                  /*Set it to "1" to enable content*/
+#if 1                            /* Set it to "1" to enable content */
 #define LV_COLOR_DEPTH 16
 #define LV_TICK_CUSTOM 1         // Touch works only with 1
 #define LV_USE_LOG 1             // See LVGL-warnings in the serial monitor
@@ -167,7 +167,7 @@ Changes in Arduino\libraries\TFT_eSPI\lv_conf.h :
 #define LV_FONT_MONTSERRAT_10 1
 #define LV_FONT_MONTSERRAT_12 1
 #define LV_FONT_DEFAULT &lv_font_montserrat_10
-#define LV_USE_DEMO_WIDGETS 1
+#define LV_USE_DEMO_WIDGETS 1                   // Enable demos
 #define LV_DEMO_WIDGETS_SLIDESHOW 1
 #define LV_USE_DEMO_KEYPAD_AND_ENCODER 1
 #define LV_USE_DEMO_BENCHMARK 1
