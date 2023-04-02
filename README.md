@@ -10,20 +10,20 @@ Works with TFT_eSPI by Bodmer, LovyanGFX and LVGL 8.3.3
 
 Sharing SPI MOSI, MISO and CLK, so you need only 11 or 12 Pin's.
 
-|                | GPIO | TFT   | Touch | SD-Card |
-| :------------- | ---: | :---- | :---- | :------ |
-| MOSI           | 23   | SDA   | T_DIN | SD_MOSI |
-| MISO           | 19   |       | T_DO  | SD_MISO |
-| CLK            | 18   | SCK   | T-CLK | SD_SCK  |
-| DC             |  2   | SDA   |       |         |
-| RST            | EN   | RESET |       |         |
-| CS  (TFT)      | 15   | CS    |       |         |
-| CS  (SD)       |  5   |       |       | SD_CS   |
-| CS  (Touch)    |  4   |       | T_CS  |         |
-| IRQ (not used) |      |       | T_IRQ |         |
-| GND            |      | GND   |       |         |
-| 3.3V           |      | VCC   |       |         |
-| 3.3V           |      | LED   |       |         |
+| GPIO | TFT   | Touch | SD-Card |                |
+| ---: | :---- | :---- | :------ | :------------- |
+| 23   | SDA   | T_DIN | SD_MOSI | MOSI           |
+| 19   |       | T_DO  | SD_MISO | MISO           |
+| 18   | SCK   | T-CLK | SD_SCK  | CLK            |
+|  2   | SDA   |       |         | DC             |
+| EN   | RESET |       |         | RST            |
+| 15   | CS    |       |         | CS  (TFT)      |
+|  5   |       |       | SD_CS   | CS  (SD)       |
+|  4   |       | T_CS  |         | CS  (Touch)    |
+|      |       | T_IRQ |         | IRQ (not used) |
+|      | GND   |       |         | GND            |
+|      | VCC   |       |         | 3.3V           |
+|      | LED   |       |         | 3.3V           |
 
 # Configure the Library TFT_eSPI
 - Edit the file : Arduino\TFT_eSPI\User_Setup.h
@@ -157,7 +157,7 @@ public:
 
 ![LVGL](pictures/LVGL_Widgets.jpg)
 
-Changed in Arduino\libraries\TFT_eSPI\lv_conf.h :
+Changes in Arduino\libraries\TFT_eSPI\lv_conf.h :
 ```java
 #if 1                  /*Set it to "1" to enable content*/
 #define LV_COLOR_DEPTH 16
