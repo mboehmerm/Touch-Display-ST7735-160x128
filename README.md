@@ -32,9 +32,9 @@ Sharing SPI MOSI, MISO and CLK, so you need only 11 or 12 Pin's.
 
 ![TFT_eSPI](pictures/TFT_graphicstest_PDQ3_Touch.jpg)
 
-Arduino\TFT_eSPI\User_Setup.h :
+Edit Arduino\TFT_eSPI\User_Setup.h :
 
-```h
+```java
 #define USER_SETUP_INFO "User_Setup"
 
 // Driver
@@ -158,7 +158,7 @@ public:
 ![LVGL](pictures/LVGL_Widgets.jpg)
 
 Changed in Arduino\libraries\TFT_eSPI\lv_conf.h :
-```h
+```java
 #if 1                  /*Set it to "1" to enable content*/
 #define LV_COLOR_DEPTH 16
 #define LV_TICK_CUSTOM 1         // Touch works only with 1
@@ -172,7 +172,6 @@ Changed in Arduino\libraries\TFT_eSPI\lv_conf.h :
 #define LV_USE_DEMO_KEYPAD_AND_ENCODER 1
 #define LV_USE_DEMO_BENCHMARK 1
 ```
-:+1:
 
 The LVGL library, i used and modified can be downloaded from the link below. It contains the first LVGL_Arduino.ino that I got working without major modifications. Or use the modified library in Arduino/libraries/lvgl.zip.
 
