@@ -33,7 +33,8 @@ Sharing SPI MOSI, MISO and CLK, so you need only 11 or 12 Pin's.
 ![TFT_eSPI](pictures/TFT_graphicstest_PDQ3_Touch.jpg)
 
 Arduino\TFT_eSPI\User_Setup.h :
-```
+
+```h
 #define USER_SETUP_INFO "User_Setup"
 
 // Driver
@@ -74,14 +75,15 @@ Arduino\TFT_eSPI\User_Setup.h :
 ![LovyanGFX](pictures/Lovyan_Touch_Test_02.jpg)
 
 LGFX_ESP32_ST7735S.hpp :
-```
+
+```c++
 #pragma once
 
-#define LGFX_USE_V1
+#define  LGFX_USE_V1
 
 #include <LovyanGFX.hpp>
 
-class LGFX : public lgfx::LGFX_Device
+class LGFX :  public lgfx::LGFX_Device
 {
   lgfx::Panel_ST7735S  _panel_instance;
   lgfx::Bus_SPI        _bus_instance;
@@ -156,7 +158,7 @@ public:
 ![LVGL](pictures/LVGL_Widgets.jpg)
 
 Changed in Arduino\libraries\TFT_eSPI\lv_conf.h :
-```
+```h
 #if 1                  /*Set it to "1" to enable content*/
 #define LV_COLOR_DEPTH 16
 #define LV_TICK_CUSTOM 1         // Touch works only with 1
@@ -170,7 +172,10 @@ Changed in Arduino\libraries\TFT_eSPI\lv_conf.h :
 #define LV_USE_DEMO_KEYPAD_AND_ENCODER 1
 #define LV_USE_DEMO_BENCHMARK 1
 ```
+:+1:
 
 The LVGL library, i used and modified can be downloaded from the link below. It contains the first LVGL_Arduino.ino that I got working without major modifications. Or use the modified library in Arduino/libraries/lvgl.zip.
 
 Download "2.8inch_ESP32-2432S028R.rar" from : http://pan.jczn1688.com/directlink/1/ESP32%20module/2.8inch_ESP32-2432S028R.rar?spm=a2g0o.detail.1000023.1.6e8869f0pW0rBB&file=2.8inch_ESP32-2432S028R.rar
+
+<!-- unvisible -->
