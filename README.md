@@ -150,14 +150,14 @@ public:
   }
 };
 ```
-# Configure LVGL 8.3.3 
+# Configure LVGL 8.3.6 
 - Create the file : Arduino\libraries\TFT_eSPI\lv_conf.h
 - Unzip the Arduino\libraries\lvgl.zip to Arduino\libraries\lvgl
 - Test : LVGL_Arduino_Test.ino
 
 ![LVGL](pictures/LVGL_Widgets.jpg)
 
-Changes in Arduino\libraries\TFT_eSPI\lv_conf.h :
+Changed lines in Arduino\libraries\TFT_eSPI\lv_conf.h :
 ```java
 #if 1                            /* Set it to "1" to enable content */
 #define LV_COLOR_DEPTH 16
