@@ -6,7 +6,7 @@ Display works with TFT_eSPI by Bodmer, LovyanGFX and LVGL 8.3.6
 
 ![Touch_Display_1 8_SD](pictures/Touch_Display_1.8_SD.png)
 
-# Connections for ESP32 DevKitC V4
+## Connections for ESP32 DevKitC V4
 
 Share SPI MOSI, MISO and CLK, so you need only 11 or 12 Pin's.
 
@@ -25,7 +25,7 @@ Share SPI MOSI, MISO and CLK, so you need only 11 or 12 Pin's.
 |      | VCC   |       |         | 3.3V           |
 |      | LED   |       |         | 3.3V           |
 
-# Configure the library TFT_eSPI
+## Configure the library TFT_eSPI
 - Edit the file : Arduino\TFT_eSPI\User_Setup.h
 - Test : TFT_graphicstest_PDQ3_Touch.ino (works with TFT_eSPI or LovyanGFX)
 - Test : LittleFS_SDcard_Touch_Jpeg_Test.ino
@@ -80,7 +80,7 @@ Edit Arduino\TFT_eSPI\User_Setup_select.h :
 //#include <User_Setups/Setup401_ST7735_Touch.h>  // new : Setup file for ST7735 with touch
 ```
 
-# Configure the library LovyanGFX
+## Configure the library LovyanGFX
 - Create the new file : Arduino\LovyanGFX\User_Setup.h\src\LGFX_ESP32_ST7735S.hpp
 - Test : Lovyan_Touch_Test.ino and TFT_graphicstest_PDQ3_Touch.ino
 
@@ -162,7 +162,7 @@ public:
   }
 };
 ```
-# Configure LVGL 8.3.6 
+## Configure LVGL 8.3.6 
 - First configure the Library TFT_eSPI
 - Create the file : Arduino\libraries\TFT_eSPI\lv_conf.h
 - Modify the lvgl library :
