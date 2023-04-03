@@ -1,5 +1,5 @@
 
-Download and unzip the modified lvgl8.3.6.zip and copy the folder lvgl to Arduino\libraries or use the modifications. Only 3 Files are modified  because the display is very small. 
+Download and unzip the modified lvgl8.3.6.zip and copy the folder lvgl to Arduino\libraries or use the modifications below. Only 3 Files are modified  because the display is very small. 
 
 Modifications in lvgl 8.3.6 :
 
