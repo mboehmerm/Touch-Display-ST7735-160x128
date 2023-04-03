@@ -163,7 +163,7 @@ public:
 };
 ```
 ## Configure LVGL 8.3.6 
-- First configure the Library TFT_eSPI
+- First configure the Library TFT_eSPI. 
 - Create and edit the file : "Arduino\libraries\lv_conf.h"
   - copy "Arduino\libraries\lvgl\lv_conf_template.h" to "Arduino\libraries\lv_conf.h"
   - Edit "Arduino\libraries\lv_conf.h"
@@ -177,7 +177,7 @@ public:
 
 ![LVGL](pictures/LVGL_Widgets.jpg)
 
-Changed lines in Arduino\libraries\lv_conf.h :
+Modified lines in Arduino\libraries\lv_conf.h :
 ```java
 #if 1                            /* Set it to "1" to enable content */
 #define LV_COLOR_DEPTH 16
