@@ -26,13 +26,13 @@ Share SPI MOSI, MISO and CLK, so you need only 11 or 12 Pin's.
 |      | LED   |       |         | 3.3V           |
 
 ## Configure the library TFT_eSPI
-- Edit the file : Arduino\TFT_eSPI\User_Setup.h
+- Edit the file : Arduino\libraries\TFT_eSPI\User_Setup.h
 - Test : TFT_graphicstest_PDQ3_Touch.ino (works with TFT_eSPI or LovyanGFX)
 - Test : LittleFS_SDcard_Touch_Jpeg_Test.ino
 
 ![TFT_eSPI](pictures/TFT_graphicstest_PDQ3_Touch.jpg)
 
-Edit Arduino\TFT_eSPI\User_Setup.h :
+Edit Arduino\libraries\TFT_eSPI\User_Setup.h :
 
 ```java
 #define USER_SETUP_INFO "User_Setup"
@@ -70,9 +70,9 @@ Edit Arduino\TFT_eSPI\User_Setup.h :
 ```
 ## Alternative configuration of the library TFT_eSPI
 - Create the new File : Setup401_ST7735_Touch.h
-- Edit the file : Arduino\TFT_eSPI\User_Setup_Select.h
+- Edit the file : Arduino\libraries\TFT_eSPI\User_Setup_Select.h
 
-Edit Arduino\TFT_eSPI\User_Setup_select.h :
+Edit Arduino\libraries\TFT_eSPI\User_Setup_select.h :
 ```java
 // Only **ONE** line below should be uncommented to define your setup.
 
@@ -81,7 +81,7 @@ Edit Arduino\TFT_eSPI\User_Setup_select.h :
 ```
 
 ## Configure the library LovyanGFX
-- Create the new file : Arduino\LovyanGFX\User_Setup.h\src\LGFX_ESP32_ST7735S.hpp
+- Create the file : Arduino\libraries\LovyanGFX\src\LGFX_ESP32_ST7735S.hpp
 - Test : Lovyan_Touch_Test.ino and TFT_graphicstest_PDQ3_Touch.ino
 
 ![LovyanGFX](pictures/Lovyan_Touch_Test_02.jpg)
@@ -164,18 +164,20 @@ public:
 ```
 ## Configure LVGL 8.3.6 
 - First configure the Library TFT_eSPI
-- Create the file : Arduino\libraries\TFT_eSPI\lv_conf.h
+- Create and edit the file : "Arduino\libraries\lv_conf.h"
+  - copy "Arduino\libraries\lvgl\lv_conf_template.h" to "Arduino\libraries\lv_conf.h"
+  - Edit "Arduino\libraries\lv_conf.h"
 - Modify the lvgl library :
-  - Copy folder "Arduino\libraries\demos" to "Arduino\libraries\ **src**\demos"
-  - Edit Arduino\libraries\ **src**\demos\benchmark\lv_demo_benchmark.c
-  - Edit Arduino\libraries\ **src**\demos\keypad_encoder\lv_demo_keypad_encoder.c
-  - Edit Arduino\libraries\ **src**\demos\widgets\lv_demo_widgets.c
-- or download and unzip the modified lvgl8.3.6.zip and copy the folder lvgl to Arduino\libraries
+  - Copy folder "Arduino\libraries\lvgl\demos" to "Arduino\libraries\lvgl\ **src**"
+  - Edit "Arduino\libraries\lvgl\ **src**\demos\benchmark\lv_demo_benchmark.c"
+  - Edit "Arduino\libraries\lvgl\src\demos\keypad_encoder\lv_demo_keypad_encoder.c"
+  - Edit "Arduino\libraries\lvgl\src\demos\widgets\lv_demo_widgets.c"
+- or download and unzip the modified "lvgl8.3.6.zip" and copy the folder "lvgl" to "Arduino\libraries"
 - Test : LVGL_Arduino_Test.ino
 
 ![LVGL](pictures/LVGL_Widgets.jpg)
 
-Changed lines in Arduino\libraries\TFT_eSPI\lv_conf.h :
+Changed lines in Arduino\libraries\lv_conf.h :
 ```java
 #if 1                            /* Set it to "1" to enable content */
 #define LV_COLOR_DEPTH 16
