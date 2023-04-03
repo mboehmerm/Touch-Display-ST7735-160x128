@@ -193,7 +193,7 @@ Changed lines in Arduino\libraries\lv_conf.h :
 #define LV_USE_DEMO_BENCHMARK 1
 ```
 
-The LVGL 8.3.3 library, i first used and modified can be downloaded from the link below. It contains the first LVGL_Arduino.ino that I got working without major modifications. Or use the modified library in Arduino/libraries/lvgl.zip.
+The LVGL 8.3.3 library, i first used and modified can be downloaded from the link below. It contains the first LVGL_Arduino.ino that I got working without major modifications.
 
 Download "2.8inch_ESP32-2432S028R.rar" from : http://pan.jczn1688.com/directlink/1/ESP32%20module/2.8inch_ESP32-2432S028R.rar?spm=a2g0o.detail.1000023.1.6e8869f0pW0rBB&file=2.8inch_ESP32-2432S028R.rar
 
