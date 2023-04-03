@@ -69,7 +69,7 @@ Edit Arduino\libraries\TFT_eSPI\User_Setup.h :
 #define SPI_TOUCH_FREQUENCY  2500000
 ```
 ## Alternative configuration of the library TFT_eSPI
-- Create the new File : Setup401_ST7735_Touch.h
+- Create the new File : Arduino\libraries\TFT_eSPI\User_Setups\Setup401_ST7735_Touch.h
 - Edit the file : Arduino\libraries\TFT_eSPI\User_Setup_Select.h
 
 Edit Arduino\libraries\TFT_eSPI\User_Setup_select.h :
