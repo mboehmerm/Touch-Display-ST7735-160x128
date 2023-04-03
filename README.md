@@ -154,10 +154,10 @@ public:
 - First configure the Library TFT_eSPI
 - Create the file : Arduino\libraries\TFT_eSPI\lv_conf.h
 - Modify the lvgl library :
-- - Copy folder "Arduino\libraries\demos" to "Arduino\libraries\ **src**\demos"
-- - Edit Arduino\libraries\ **src**\demos\benchmark\lv_demo_benchmark.c
-- - Edit Arduino\libraries\ **src**\demos\keypad_encoder\lv_demo_keypad_encoder.c
-- - Edit Arduino\libraries\ **src**\demos\widgets\lv_demo_widgets.c
+  - Copy folder "Arduino\libraries\demos" to "Arduino\libraries\ **src**\demos"
+  - Edit Arduino\libraries\ **src**\demos\benchmark\lv_demo_benchmark.c
+  - Edit Arduino\libraries\ **src**\demos\keypad_encoder\lv_demo_keypad_encoder.c
+  - Edit Arduino\libraries\ **src**\demos\widgets\lv_demo_widgets.c
 - or download and unzip the modified lvgl8.3.6.zip and copy the folder lvgl to Arduino\libraries
 - Test : LVGL_Arduino_Test.ino
 
