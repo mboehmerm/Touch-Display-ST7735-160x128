@@ -2,13 +2,13 @@
 
 Aliexpress Display ~5€, tested with a ESP32 DevKitC V4 and Arduino IDE 2.0.4
 
-Works with TFT_eSPI by Bodmer, LovyanGFX and LVGL 8.3.3
+Display works with TFT_eSPI by Bodmer, LovyanGFX and LVGL 8.3.6
 
 ![Touch_Display_1 8_SD](pictures/Touch_Display_1.8_SD.png)
 
 # Connections for ESP32 DevKitC V4
 
-Sharing SPI MOSI, MISO and CLK, so you need only 11 or 12 Pin's.
+Share SPI MOSI, MISO and CLK, so you need only 11 or 12 Pin's.
 
 | GPIO | TFT   | Touch | SD-Card |                |
 | ---: | :---- | :---- | :------ | :------------- |
@@ -151,8 +151,14 @@ public:
 };
 ```
 # Configure LVGL 8.3.6 
+- First configure the Library TFT_eSPI
 - Create the file : Arduino\libraries\TFT_eSPI\lv_conf.h
-- Unzip the Arduino\libraries\lvgl.zip to Arduino\libraries\lvgl
+- Modify the lvgl library :
+- - Copy folder "Arduino\libraries\demos" to "Arduino\libraries\ **src**\demos"
+- - Edit Arduino\libraries\ **src**\demos\benchmark\lv_demo_benchmark.c
+- - Edit Arduino\libraries\ **src**\demos\keypad_encoder\lv_demo_keypad_encoder.c
+- - Edit Arduino\libraries\ **src**\demos\widgets\lv_demo_widgets.c
+- or download and unzip the modified lvgl8.3.6.zip and copy the folder lvgl to Arduino\libraries
 - Test : LVGL_Arduino_Test.ino
 
 ![LVGL](pictures/LVGL_Widgets.jpg)
@@ -173,7 +179,7 @@ Changed lines in Arduino\libraries\TFT_eSPI\lv_conf.h :
 #define LV_USE_DEMO_BENCHMARK 1
 ```
 
-The LVGL library, i used and modified can be downloaded from the link below. It contains the first LVGL_Arduino.ino that I got working without major modifications. Or use the modified library in Arduino/libraries/lvgl.zip.
+The LVGL 8.3.3 library, i first used and modified can be downloaded from the link below. It contains the first LVGL_Arduino.ino that I got working without major modifications. Or use the modified library in Arduino/libraries/lvgl.zip.
 
 Download "2.8inch_ESP32-2432S028R.rar" from : http://pan.jczn1688.com/directlink/1/ESP32%20module/2.8inch_ESP32-2432S028R.rar?spm=a2g0o.detail.1000023.1.6e8869f0pW0rBB&file=2.8inch_ESP32-2432S028R.rar
 
