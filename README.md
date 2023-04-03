@@ -64,7 +64,7 @@ Edit Arduino\libraries\TFT_eSPI\User_Setup.h :
 #define SMOOTH_FONT
 
 //Other options
-#define SPI_FREQUENCY       40000000 
+#define SPI_FREQUENCY       40000000
 #define SPI_READ_FREQUENCY  20000000
 #define SPI_TOUCH_FREQUENCY  2500000
 ```
