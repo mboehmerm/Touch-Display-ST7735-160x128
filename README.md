@@ -68,7 +68,7 @@ Edit Arduino\libraries\TFT_eSPI\User_Setup.h :
 #define SPI_READ_FREQUENCY  20000000
 #define SPI_TOUCH_FREQUENCY  2500000
 ```
-## Alternative configuration of the library TFT_eSPI
+## Alternative configuration of the library TFT_eSPI 2.5.0
 - Create the new File : Arduino\libraries\TFT_eSPI\User_Setups\Setup401_ST7735_Touch.h
 - Edit the file : Arduino\libraries\TFT_eSPI\User_Setup_Select.h
 
@@ -80,7 +80,7 @@ Edit Arduino\libraries\TFT_eSPI\User_Setup_select.h :
 //#include <User_Setups/Setup401_ST7735_Touch.h>  // new : Setup file for ST7735 with touch
 ```
 
-## Configure the library LovyanGFX
+## Configure the library LovyanGFX 1.1.5
 - Create the file : Arduino\libraries\LovyanGFX\src\LGFX_ESP32_ST7735S.hpp
 - Test : Lovyan_Touch_Test.ino and TFT_graphicstest_PDQ3_Touch.ino
 
