@@ -17,7 +17,7 @@ Share SPI MOSI, MISO and CLK, so you need only 11 or 12 Pin's.
 | 23   | SDA   | T_DIN | SD_MOSI | MOSI           |
 | 19   |       | T_DO  | SD_MISO | MISO           |
 | 18   | SCK   | T-CLK | SD_SCK  | CLK            |
-|  2   | SDA   |       |         | DC             |
+|  2   | A0    |       |         | DC             |
 | EN   | RESET |       |         | RST            |
 | 15   | CS    |       |         | CS  (TFT)      |
 |  5   |       |       | SD_CS   | CS  (SD)       |
