@@ -1,13 +1,15 @@
-This modified program uses TFT, Touch, SD and LittleFS
+## LittleFS_SDcard_Touch_Jpeg_Test.ino
 
-Original : Arduino\libraries\TFT_eSPI\examples\Generic\ESP32_SDcard_jpeg\ESP32_SDcard_jpeg.ino
+This modified program uses al three SPI devices (TFT, Touch, SD) and LittleFS.
+
+> Original : Arduino\libraries\TFT_eSPI\examples\Generic\ESP32_SDcard_jpeg\ESP32_SDcard_jpeg.ino
 
 Usage :
 
-- install library JPEGDecoder
+- Install library JPEGDecoder
 - Copy the 4 files in the data folder to the root directory of an Fat32 SD-card
-- first usage : uncomment the line "#define SD_TO_LITLEFS". 01.jpg is now copied from SD-Card to the LittleFS file system
-- second usage : comment the line "#define SD_TO_LITLEFS". Three files are now loaded from SD-Card and 01.jpg from LittleFS
+- First usage : uncomment the line "#define SD_TO_LITLEFS". 01.jpg is now copied from SD-Card to the LittleFS file system
+- Second usage : comment the line "#define SD_TO_LITLEFS". Three files are now loaded from SD-Card and 01.jpg from LittleFS
 - Upload with partition scheme: "Default 4MB with spiffs..." ( ESP32 DevKitC v4 )
 
 Run :
