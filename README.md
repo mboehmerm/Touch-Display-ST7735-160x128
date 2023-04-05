@@ -169,7 +169,7 @@ public:
   - Edit "Arduino\libraries\lv_conf.h"
 - Modify the lvgl library :
   - Copy the folder "Arduino\libraries\lvgl\demos" to "Arduino\libraries\lvgl\ **src**"
-  - Three files were modified so it fits better on the small display (not necessary) :
+  - Three files can be modified so it fits better on the small display (not necessary) :
   - Edit "Arduino\libraries\lvgl\ **src**\demos\benchmark\lv_demo_benchmark.c"
   - Edit "Arduino\libraries\lvgl\src\demos\keypad_encoder\lv_demo_keypad_encoder.c"
   - Edit "Arduino\libraries\lvgl\src\demos\widgets\lv_demo_widgets.c"
