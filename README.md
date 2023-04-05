@@ -2,7 +2,9 @@
 
 Aliexpress Display ~5€, tested with a ESP32 DevKitC V4 and Arduino IDE 2.0.4
 
-Display works with TFT_eSPI by Bodmer, LovyanGFX and LVGL 8.3.6
+Display works with TFT_eSPI by Bodmer, LovyanGFX and LVGL 8.3.6 
+
+Speed about 120fps
 
 ![Touch_Display_1 8_SD](pictures/Touch_Display_1.8_SD.png)
 
@@ -64,10 +66,11 @@ Edit Arduino\libraries\TFT_eSPI\User_Setup.h :
 #define SMOOTH_FONT
 
 //Other options
-#define SPI_FREQUENCY       40000000
+#define SPI_FREQUENCY       40000000 // 80000000 works with errors
 #define SPI_READ_FREQUENCY  20000000
 #define SPI_TOUCH_FREQUENCY  2500000
 ```
+Speedtest : Arduino\libraries\TFT_eSPI\examples\DMA test\Bouncy_Circles\Bouncy_Circles.ino
 ## Alternative configuration of the library TFT_eSPI 2.5.0
 - Create the new File : Arduino\libraries\TFT_eSPI\User_Setups\Setup401_ST7735_Touch.h
 - Edit the file : Arduino\libraries\TFT_eSPI\User_Setup_Select.h
