@@ -19,7 +19,7 @@ press touch to repeat test
 
 //#define Lovyan                     // works with Bodmer's TFT_eSPI or LovyanGFX !!!
 #ifdef Lovyan
-  #include <LGFX_ESP32_ST7735S.hpp>  // works wi
+  #include <LGFX_ESP32_ST7735S.hpp>
   #include <LGFX_TFT_eSPI.hpp>
 #else  
   #include <TFT_eSPI.h> 
