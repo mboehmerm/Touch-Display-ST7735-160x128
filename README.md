@@ -27,7 +27,7 @@ Share SPI MOSI, MISO and CLK, so you need only 11 or 12 Pin's.
 |      | VCC   |       |         | 3.3V           |
 |      | LED   |       |         | 3.3V           |
 
-## Configure the library TFT_eSPI
+## Install and configure the library TFT_eSPI
 - Edit the file : Arduino\libraries\TFT_eSPI\User_Setup.h
 - Test : TFT_graphicstest_PDQ3_Touch.ino (works with TFT_eSPI or LovyanGFX)
 - Test : LittleFS_SDcard_Touch_Jpeg_Test.ino (confirms that all three SPI devices work)
@@ -83,7 +83,7 @@ Edit Arduino\libraries\TFT_eSPI\User_Setup_select.h :
 //#include <User_Setups/Setup401_ST7735_Touch.h>  // new : Setup file for ST7735 with touch
 ```
 
-## Configure the library LovyanGFX 1.1.5
+## Install and configure the library LovyanGFX 1.1.5
 - Create the file : Arduino\libraries\LovyanGFX\src\LGFX_ESP32_ST7735S.hpp
 - Test : Lovyan_Touch_Test.ino and TFT_graphicstest_PDQ3_Touch.ino
 
@@ -165,8 +165,9 @@ public:
   }
 };
 ```
-## Configure LVGL 8.3.6 
+## Install and configure LVGL 8.3.6 
 - First configure the Library TFT_eSPI. 
+- Install only LVGL 8.3.6 "Note that the examples and demos are now part of the main LVGL library."
 - Create and edit the file : "Arduino\libraries\lv_conf.h"
   - copy "Arduino\libraries\lvgl\lv_conf_template.h" to "Arduino\libraries\lv_conf.h"
   - Edit "Arduino\libraries\lv_conf.h"
