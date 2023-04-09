@@ -4,7 +4,7 @@ Aliexpress Display ~5€, tested with a ESP32 DevKitC V4 and Arduino IDE 2.0.4
 
 Display works with TFT_eSPI by Bodmer, LovyanGFX and LVGL 8.3.6 
 
-Speed about 120fps
+Speed about 120fps (DMA 40MHz DMA_Bouncy_Circles.ino)
 
 ![Touch_Display_1 8_SD](pictures/Touch_Display_1.8_SD.png)
 
@@ -172,15 +172,26 @@ public:
   - copy "Arduino\libraries\lvgl\lv_conf_template.h" to "Arduino\libraries\lv_conf.h"
   - Edit "Arduino\libraries\lv_conf.h"
 - Modify the lvgl library :
-  - Copy the folder "Arduino\libraries\lvgl\demos" to "Arduino\libraries\lvgl\ **src**"
+  - Copy the folder "Arduino\libraries\lvgl\demos" to "Arduino\libraries\lvgl\ **src**\demos"
+  - Copy the folder "Arduino\libraries\lvgl\examples" to "Arduino\libraries\lvgl\ **src**\examples"
   - Three files can be modified so it fits better on the small display (not necessary) :
   - Edit "Arduino\libraries\lvgl\ **src**\demos\benchmark\lv_demo_benchmark.c"
   - Edit "Arduino\libraries\lvgl\src\demos\keypad_encoder\lv_demo_keypad_encoder.c"
   - Edit "Arduino\libraries\lvgl\src\demos\widgets\lv_demo_widgets.c"
+- Test : LVGL_Arduino_rx1.8.ino
+  - different rotation : modify the line "#define SCREEN_ROTATION **0**"
+  - try other demo or example : uncomment **ONE** of the lines starting with "lv_demo_" or "lv_example_"
 
-- Test : LVGL_Arduino_Test.ino
-
+LVGL_Arduino_rx1.8 with rotation 0
 ![LVGL](pictures/LVGL_Widgets.jpg)
+
+LVGL_Arduino_rx1.8 with rotation 0 (lv_demo_widgets.c not modified)
+![LVGL](pictures/LVGL_Widgets_02.jpg)
+
+
+LVGL_Arduino_rx with rotation 0 and lv_example_btn_1();
+![LVGL example](pictures/LVGL_example.jpg)
+- Doku : https://docs.lvgl.io/master/examples.html
 
 Modified lines in Arduino\libraries\lv_conf.h :
 ```java
@@ -198,7 +209,7 @@ Modified lines in Arduino\libraries\lv_conf.h :
 #define LV_USE_DEMO_BENCHMARK 1
 ```
 
-The LVGL 8.3.3 library, i first used and modified can be downloaded from the link below. It contains the first LVGL_Arduino.ino that I got working without major modifications.
+The LVGL 8.3.3 library, i first used and modified can be downloaded from the link below. It contains the first LVGL_Arduino.ino that I got working without major modifications. LVGL_Arduino_Test.ino based on this file.
 
 Download "2.8inch_ESP32-2432S028R.rar" from : http://pan.jczn1688.com/directlink/1/ESP32%20module/2.8inch_ESP32-2432S028R.rar?spm=a2g0o.detail.1000023.1.6e8869f0pW0rBB&file=2.8inch_ESP32-2432S028R.rar
 
