@@ -27,13 +27,13 @@
 
 // Only ONE line below should be uncommented to define your setup.  Add extra lines and files as needed.
 
-#include <User_Setup.h>                                   // Default setup is root library folder
+//#include <User_Setup.h>                  // Default setup is root library folder
 
-//#include <User_Setups/Setup401_ST7735_Touch.h>          // new : Setup file for ST7735 with touch, ST7735_GREENTAB2
+// Setup file in folder Arduino/libraries (updates will not overwrite your setups)
+#include <../Setup401_ST7735_Touch.h>      // new : Setup file for  ST7735 1.8" with touch, ST7735_GREENTAB2
 
-
-//#include <User_Setups/Setup401_ST7735.h> // Setup file für ESP32 ST7735_GREENTAB2 
-//#include <User_Setups/Setup402_xxxxxx.h> // Setup file für ESP32 xxxx
+//#include <User_Setups/Setup404_xxxxxx.h> // Setup file für ESP32 xxxx
+//#include <../Setup404_xxxxxx.h>          // Setup file für ESP32 xxxx
 
 
 //#include <User_Setups/Setup1_ILI9341.h>  // Setup file for ESP8266 configured for my ILI9341

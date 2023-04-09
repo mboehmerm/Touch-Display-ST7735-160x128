@@ -1,6 +1,21 @@
+/* ----------------------------------------------------------------------------------------------------
+// Edit Arduino\libraries\TFT_eSPI\User_Setup_select.h :
+
+// Only **ONE** line below should be uncommented to define your setup.
+//#include <User_Setup.h>                                 // Default setup is root library folder
+
+// new setup file in folder Arduino/libraries/TFT_eSPI/User_Setups
+//#include <User_Setups/Setup401_ST7735_Touch.h>          // new : Setup file for  ST7735 1.8" with touch, ST7735_GREENTAB2
+
+// new setup file in folder Arduino/libraries (updates will not overwrite your setups)
+#include <../Setup401_ST7735_Touch.h>                     // new : Setup file for  ST7735 1.8" with touch, ST7735_GREENTAB2
+
+---------------------------------------------------------------------------------------------------- */ 
+
 // See SetupX_Template.h for all options available
 #define USER_SETUP_ID 401
 
+// Driver
 #define ST7735_DRIVER
 
 #define TFT_WIDTH  128
@@ -14,6 +29,7 @@
 //  #define TFT_RGB_ORDER TFT_RGB  // Colour order Red-Green-Blue
 //  #define TFT_RGB_ORDER TFT_BGR  // Colour order Blue-Green-Red
 
+// Pins
 #define TFT_MISO 19
 #define TFT_MOSI 23
 #define TFT_SCLK 18
@@ -23,6 +39,7 @@
 
 #define TOUCH_CS 4     // Chip select pin (T_CS) of touch screen
 
+// Fonts
 #define LOAD_GLCD   // Font 1. Original Adafruit 8 pixel font needs ~1820 bytes in FLASH
 #define LOAD_FONT2  // Font 2. Small 16 pixel high font, needs ~3534 bytes in FLASH, 96 characters
 #define LOAD_FONT4  // Font 4. Medium 26 pixel high font, needs ~5848 bytes in FLASH, 96 characters
@@ -34,16 +51,12 @@
 
 #define SMOOTH_FONT
 
-
-// #define SPI_FREQUENCY  20000000
-// #define SPI_FREQUENCY  27000000
-#define SPI_FREQUENCY  40000000    // works fine
-// #define SPI_FREQUENCY  80000000 // works with errors
+// Other options
+#define SPI_FREQUENCY  40000000    // works fine, 80000000 with some errors
 
 // Optional reduced SPI frequency for reading TFT
 #define SPI_READ_FREQUENCY  20000000
 
 #define SPI_TOUCH_FREQUENCY  2500000
-
 
 // #define SUPPORT_TRANSACTIONS

@@ -72,15 +72,18 @@ Edit Arduino\libraries\TFT_eSPI\User_Setup.h :
 ```
 Speedtest : Arduino\libraries\TFT_eSPI\examples\DMA test\Bouncy_Circles\Bouncy_Circles.ino
 ## Alternative configuration of the library TFT_eSPI 2.5.0
-- Create the new File : Arduino\libraries\TFT_eSPI\User_Setups\Setup401_ST7735_Touch.h
+- Create a new File Arduino\libraries\Setup401_ST7735_Touch.h with your configuration data
 - Edit the file : Arduino\libraries\TFT_eSPI\User_Setup_Select.h
 
 Edit Arduino\libraries\TFT_eSPI\User_Setup_select.h :
 ```java
 // Only **ONE** line below should be uncommented to define your setup.
 
-#include <User_Setup.h>                           // Default setup is root library folder
-//#include <User_Setups/Setup401_ST7735_Touch.h>  // new : Setup file for ST7735 with touch
+//#include <User_Setup.h>                                 // Default setup is root library folder
+
+// new setup file in folder Arduino/libraries (updates will not overwrite your setups)
+#include <../Setup401_ST7735_Touch.h>                   // new : Setup file for  ST7735 1.8" with touch, ST7735_GREENTAB2
+
 ```
 
 ## Install and configure the library LovyanGFX 1.1.5
