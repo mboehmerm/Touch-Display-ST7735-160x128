@@ -28,6 +28,7 @@ Share SPI MOSI, MISO and CLK, so you need only 11 or 12 Pin's.
 |      | LED   |       |         | 3.3V           |
 
 ## Install and configure the library TFT_eSPI
+- Default Windows Arduino folder : C:\Users\<username>\Documents\Arduino
 - Edit the file : Arduino\libraries\TFT_eSPI\User_Setup.h
 - Test : TFT_graphicstest_PDQ3_Touch.ino (works with TFT_eSPI or LovyanGFX)
 - Test : LittleFS_SDcard_Touch_Jpeg_Test.ino (confirms that all three SPI devices work)
