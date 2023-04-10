@@ -2,7 +2,7 @@
 
 Aliexpress Display ~5€, tested with a ESP32 DevKitC V4 and Arduino IDE 2.0.4
 
-Display works with TFT_eSPI by Bodmer, LovyanGFX and LVGL 8.3.6 
+Display works with [TFT_eSPI by Bodmer](#espi), [LovyanGFX](#lov) and [LVGL 8.3.6](#lvgl)
 
 Speed about 120fps (DMA 40MHz DMA_Bouncy_Circles.ino)
 
@@ -27,7 +27,7 @@ Share SPI MOSI, MISO and CLK, so you need only 11 or 12 Pin's.
 |      | VCC   |       |         | 3.3V           |
 |      | LED   |       |         | 3.3V           |
 
-## Install and configure the library TFT_eSPI
+## Install and configure the library TFT_eSPI <a name="espi"></a>
 - Default Windows Arduino folder : C:\Users\<username>\Documents\Arduino
 - Edit the file : Arduino\libraries\TFT_eSPI\User_Setup.h
 - Test : TFT_graphicstest_PDQ3_Touch.ino (works with TFT_eSPI or LovyanGFX)
@@ -87,7 +87,7 @@ Edit Arduino\libraries\TFT_eSPI\User_Setup_select.h :
 
 ```
 
-## Install and configure the library LovyanGFX 1.1.5
+## Install and configure the library LovyanGFX 1.1.5 <a name="lov"></a>
 - Create the file : Arduino\libraries\LovyanGFX\src\LGFX_ESP32_ST7735S.hpp
 - Test : Lovyan_Touch_Test.ino and TFT_graphicstest_PDQ3_Touch.ino
 
@@ -169,7 +169,7 @@ public:
   }
 };
 ```
-## Install and configure LVGL 8.3.6 
+## Install and configure LVGL 8.3.6 <a name="lvgl"></a>
 - First configure the Library TFT_eSPI. 
 - Install only LVGL 8.3.6 "Note that the examples and demos are now part of the main LVGL library."
 - Create and edit the file : "Arduino\libraries\lv_conf.h"
