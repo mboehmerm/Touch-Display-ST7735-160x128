@@ -4,7 +4,7 @@ Aliexpress Display ~5€, tested with a ESP32 DevKitC V4 and Arduino IDE 2.0.4 /
 
 Display works with [TFT_eSPI by Bodmer](#espi), [LovyanGFX](#lov) and [LVGL 8.3.6](#lvgl)
 
-Speed about 120fps ( DMA_Bouncy_Circles.ino , 40MHz )
+Speed about 120fps ( DMA_Bouncy_Circles.ino )
 
 ![Touch_Display_1 8_SD](pictures/Touch_Display_1.8_SD.png)
 
