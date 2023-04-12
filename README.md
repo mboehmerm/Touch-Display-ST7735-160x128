@@ -1,10 +1,10 @@
 # SPI Touch Display ST7735 1.8" 160x128 XPT2046
 
-Aliexpress Display ~5€, tested with a ESP32 DevKitC V4 and Arduino IDE 2.0.4
+Aliexpress Display ~5€, tested with a ESP32 DevKitC V4 and Arduino IDE 2.0.4 / [PlatformIO](#pla)
 
 Display works with [TFT_eSPI by Bodmer](#espi), [LovyanGFX](#lov) and [LVGL 8.3.6](#lvgl)
 
-Speed about 120fps (DMA 40MHz DMA_Bouncy_Circles.ino)
+Speed about 120fps ( DMA_Bouncy_Circles.ino , 40MHz )
 
 ![Touch_Display_1 8_SD](pictures/Touch_Display_1.8_SD.png)
 
@@ -217,7 +217,7 @@ The LVGL 8.3.3 library, i first used and modified can be downloaded from the lin
 
 Download "2.8inch_ESP32-2432S028R.rar" from : http://pan.jczn1688.com/directlink/1/ESP32%20module/2.8inch_ESP32-2432S028R.rar?spm=a2g0o.detail.1000023.1.6e8869f0pW0rBB&file=2.8inch_ESP32-2432S028R.rar
 
-## Use Visual Studio Code and PlatformIO
+## Use Visual Studio Code and PlatformIO <a name="pla"></a>
 
 Photos and Screenshots are in this similar repository : [/mboehmerm/Touch-Display-ili9341-320x240](https://github.com//mboehmerm/Touch-Display-ili9341-320x240)
 
