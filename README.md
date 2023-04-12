@@ -254,6 +254,8 @@ Use PlatformIO with the LVGL Arduino Demo :
 - Modify src/main.cpp (not necessary) : 
   - different rotation : modify the line "#define SCREEN_ROTATION **0**"
   - try other demo or example : uncomment **ONE** of the lines starting with "lv_demo_" or "lv_example_"
+  - Three files can be modified so it fits better on the small display (not necessary) :
+    - Edit "ST7735_LVGL/.pio/libdeps/esp32dev/lvgl/**src**/demos/benchmark/lv_demo_benchmark.c"
 - Before uploading :
   - If necessary set environment to "Default (ST7735_LVGL)"
   - Connect the ESP32 DevKitC v4
