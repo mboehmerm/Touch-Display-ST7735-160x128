@@ -1,7 +1,7 @@
 
 #include <LovyanGFX.hpp>
 
-//  Modified version of : Arduino\libraries\LovyanGFX\examples\Lovyan_user_setting.ino
+//  Modified version of : Arduino\libraries\LovyanGFX\examples\HowToUse\2_user_setting\Lovyan_user_setting.ino
 //  Also modified is    : Arduino\libraries\LovyanGFX\src\lgfx\v1\LGFXBase.cpp ( LGFX_Device::calibrate_touch )
 //                        Serial monitor shows now the calibration data, if you call display.setTouchCalibrate(calData);
 
