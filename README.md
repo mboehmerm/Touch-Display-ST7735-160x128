@@ -257,7 +257,7 @@ Use PlatformIO with the LVGL Arduino Demo :
   - Three files can be modified so it fits better on the small display (not necessary) :
     - Edit "ST7735_LVGL/.pio/libdeps/esp32dev/lvgl/**src**/demos/benchmark/lv_demo_benchmark.c"
 - Before uploading :
-  - If necessary set environment to "Default (ST7735_LVGL)"
+  - If necessary set environment to "Default ( ST7735_LVGL )"
   - Connect the ESP32 DevKitC v4
 - Upload (Press 
  ![PlatfomIO](pictures/PlatformIO_Bottom_Arrow.jpg) ) 
