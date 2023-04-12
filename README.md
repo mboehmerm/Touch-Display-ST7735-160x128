@@ -217,4 +217,46 @@ The LVGL 8.3.3 library, i first used and modified can be downloaded from the lin
 
 Download "2.8inch_ESP32-2432S028R.rar" from : http://pan.jczn1688.com/directlink/1/ESP32%20module/2.8inch_ESP32-2432S028R.rar?spm=a2g0o.detail.1000023.1.6e8869f0pW0rBB&file=2.8inch_ESP32-2432S028R.rar
 
+## Use Visual Studio Code and PlatformIO
+
+More Photos and Screenshots are here : [/mboehmerm/Touch-Display-ili9341-320x240](/mboehmerm/Touch-Display-ili9341-320x240)
+
+Test PlatformIO with the TFT_eSPI graphicstest example :
+- Default Windows PlatformIO folder : C:\Users\ "username"\Documents\PlatformIO
+- Install Visual Studio Code and PlatformIO
+  - https://platformio.org/install/ide?install=vscode
+- Create a new project in PlatformIO
+  - Press PIO Home ![PlatfomIO](pictures/PlatformIO_Bottom_Home.jpg) then click on ![New Project](pictures/PlatformIO_New_Project_Button.jpg) 
+  - Name : ST7735_graphicstest_PDQ_Touch
+  - Board : Espressif ESP32 Dev Module
+  - Framework : Arduino
+- Edit [platformio.ini](/PlatformIO/Projects/ST7735_graphicstest_PDQ_Touch/platformio.ini) 
+- Edit [src/main.cpp](/PlatformIO/Projects/ST7735_graphicstest_PDQ_Touch/src/main.cpp)
+- Before uploading :
+  - If necessary set environment to "Default (ST7735_graphicstest_PDQ_Touch)"
+  - Connect the ESP32 DevKitC v4
+  - Edit in "platformio.ini" monitor_port=COM13 
+- Upload (Press 
+ ![PlatfomIO](pictures/PlatformIO_Bottom_Arrow.jpg) ) 
+
+Use PlatformIO with the LVGL Arduino Demo :
+
+- Create a new project in PlatformIO
+  - Name : ST7735_LVGL
+  - Board : Espressif ESP32 Dev Module
+  - Framework : Arduino
+- Edit [platformio.ini](/PlatformIO/Projects/ST7735_LVGL/platformio.ini )
+- Edit [main.c](/PlatformIO/Projects/ST7735_LVGL/src/main.cpp )
+- In the folder "PlatformIO\Projects\ST7735_LVGL\ .pio\libdeps\esp32dev\lvgl\"
+  - copy the folder "demos" to "src\demos"
+  - copy the folder "examples" to "src\examples"
+- Modify src/main.cpp (not necessary) : 
+  - different rotation : modify the line "#define SCREEN_ROTATION **0**"
+  - try other demo or example : uncomment **ONE** of the lines starting with "lv_demo_" or "lv_example_"
+- Before uploading :
+  - If necessary set environment to "Default (ST7735_LVGL)"
+  - Connect the ESP32 DevKitC v4
+- Upload (Press 
+ ![PlatfomIO](pictures/PlatformIO_Bottom_Arrow.jpg) ) 
+
 <!-- unvisible -->
