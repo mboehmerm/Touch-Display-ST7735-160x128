@@ -69,7 +69,7 @@ Edit Arduino\libraries\TFT_eSPI\User_Setup.h :
 //Other options
 #define SPI_FREQUENCY       40000000 // 80000000 works with errors
 #define SPI_READ_FREQUENCY  20000000
-#define SPI_TOUCH_FREQUENCY  2500000
+#define SPI_TOUCH_FREQUENCY  2000000 // otherwise problems on one corner with calibration
 ```
 Speedtest : Arduino\libraries\TFT_eSPI\examples\DMA test\Bouncy_Circles\Bouncy_Circles.ino
 ## Alternative configuration of the library TFT_eSPI 2.5.0

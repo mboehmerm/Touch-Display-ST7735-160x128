@@ -57,6 +57,6 @@
 // Optional reduced SPI frequency for reading TFT
 #define SPI_READ_FREQUENCY  20000000
 
-#define SPI_TOUCH_FREQUENCY  2500000
+#define SPI_TOUCH_FREQUENCY  2000000 // otherwise problems on one corner with calibration
 
 // #define SUPPORT_TRANSACTIONS
