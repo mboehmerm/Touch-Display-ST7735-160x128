@@ -259,4 +259,23 @@ Use PlatformIO with the LVGL Arduino Demo :
 - Upload (Press 
  ![PlatfomIO](pictures/PlatformIO_Bottom_Arrow.jpg) ) 
 
+## Use  PlatformIO with lv_conf.h , User_Setup.h and User_Setup_Select.h
+- No build_flags nesessary in platform.ini for TFT_eSPI and lvgl (see below)
+- The library folder [/PlatformIO/Projects/ST7735_LVGL/.pio/libdeps/esp32dev](/PlatformIO/Projects/ST7735_LVGL/.pio/libdeps/esp32dev) contains the libraries and the configuration files for TFT_eSPI and lvgl
+- "lv_conf.h" should be created here : [/PlatformIO/Projects/ST7735_LVGL/.pio/libdeps/esp32dev/lv_conf.h)](/PlatformIO/Projects/ST7735_LVGL/.pio/libdeps/esp32dev/lv_conf.h)
+
+platform.ini :
+```c
+[env:esp32dev]
+platform = espressif32
+board = esp32dev
+framework = arduino
+lib_deps = 
+	lvgl/lvgl@^8.3.4
+	bodmer/TFT_eSPI@^2.5.23
+monitor_port=COM13
+monitor_speed=115200
+```
+
+
 <!-- unvisible -->
