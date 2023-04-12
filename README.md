@@ -211,6 +211,7 @@ Modified lines in Arduino\libraries\lv_conf.h :
 #define LV_DEMO_WIDGETS_SLIDESHOW 1
 #define LV_USE_DEMO_KEYPAD_AND_ENCODER 1
 #define LV_USE_DEMO_BENCHMARK 1
+#define LV_USE_DEMO_MUSIC 1
 ```
 
 The LVGL 8.3.3 library, i first used and modified can be downloaded from the link below. It contains the first LVGL_Arduino.ino that I got working without major modifications. LVGL_Arduino_Test.ino based on this file.
