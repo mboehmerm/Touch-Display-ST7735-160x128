@@ -219,7 +219,7 @@ Download "2.8inch_ESP32-2432S028R.rar" from : http://pan.jczn1688.com/directlink
 
 ## Use Visual Studio Code and PlatformIO
 
-More Photos and Screenshots are here : [/mboehmerm/Touch-Display-ili9341-320x240](/mboehmerm/Touch-Display-ili9341-320x240)
+More Photos and Screenshots are here : [/mboehmerm/Touch-Display-ili9341-320x240](https://github.com//mboehmerm/Touch-Display-ili9341-320x240)
 
 Test PlatformIO with the TFT_eSPI graphicstest example :
 - Default Windows PlatformIO folder : C:\Users\ "username"\Documents\PlatformIO
