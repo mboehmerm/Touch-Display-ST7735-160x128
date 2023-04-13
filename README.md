@@ -192,8 +192,8 @@ LVGL_Arduino_rx1.8 with rotation 0 (lv_demo_widgets.c modified)
 LVGL_Arduino_rx1.8 with rotation 3 (lv_demo_widgets.c modified)
 ![LVGL](pictures/LVGL_Widget_R3_Analytics.JPG)
 
-LVGL_Arduino_rx1.8 with rotation 0 (lv_demo_widgets.c not modified)
-![LVGL](pictures/LVGL_Widget_R3_Analytics.JPG)
+LVGL_Arduino_rx1.8 with rotation 0 (lv_demo_widgets.c modified)
+![LVGL](pictures/LVGL_Widget_R0_Analytics.JPG)
 
 
 LVGL_Arduino_rx with rotation 0 and lv_example_btn_1();
@@ -223,7 +223,9 @@ Download "2.8inch_ESP32-2432S028R.rar" from : http://pan.jczn1688.com/directlink
 
 ## Use Visual Studio Code and PlatformIO <a name="pla"></a>
 
-Photos and Screenshots are in this similar repository : [/mboehmerm/Touch-Display-ili9341-320x240](https://github.com//mboehmerm/Touch-Display-ili9341-320x240)
+![TFT_eSPI](pictures/ScreenShot_PlatformIO.jpg)
+
+More photos and screenshots are in this similar repository : [/mboehmerm/Touch-Display-ili9341-320x240](https://github.com//mboehmerm/Touch-Display-ili9341-320x240)
 
 Test PlatformIO with the TFT_eSPI graphicstest example :
 - Default Windows PlatformIO folder : C:\Users\ "username"\Documents\PlatformIO
@@ -242,8 +244,6 @@ Test PlatformIO with the TFT_eSPI graphicstest example :
   - Edit in "platformio.ini" monitor_port=COM13 
 - Upload (Press 
  ![PlatfomIO](pictures/PlatformIO_Bottom_Arrow.jpg) ) 
-
-![TFT_eSPI](pictures/ScreenShot_PlatformIO.jpg)
 
 Use PlatformIO with the LVGL Arduino Demo :
 
