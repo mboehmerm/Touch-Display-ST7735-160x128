@@ -93,14 +93,17 @@ static void selectors_create(lv_obj_t * parent)
     lv_table_set_cell_value(obj, 0, 1, "01");
     lv_table_set_cell_value(obj, 1, 0, "10");
     lv_table_set_cell_value(obj, 1, 1, "11");
-    lv_table_set_cell_value(obj, 2, 0, "20");
-    lv_table_set_cell_value(obj, 2, 1, "21");
-    lv_table_set_cell_value(obj, 3, 0, "30");
-    lv_table_set_cell_value(obj, 3, 1, "31");
+    //lv_table_set_cell_value(obj, 2, 0, "20");
+    //lv_table_set_cell_value(obj, 2, 1, "21");
+    //lv_table_set_cell_value(obj, 3, 0, "30");
+    //lv_table_set_cell_value(obj, 3, 1, "31");
+    lv_table_set_col_width (obj, 0, 50);                  // new
+    lv_table_set_col_width (obj, 1, 50);                  // new
     lv_obj_add_flag(obj, LV_OBJ_FLAG_SCROLL_ON_FOCUS);
 
     obj = lv_calendar_create(parent);
     lv_obj_add_flag(obj, LV_OBJ_FLAG_SCROLL_ON_FOCUS);
+    lv_obj_set_size(obj, 150, 170);                       // new
 
     //obj = lv_btnmatrix_create(parent);                  // modified
     //lv_obj_add_flag(obj, LV_OBJ_FLAG_SCROLL_ON_FOCUS);  // modified
@@ -165,12 +168,13 @@ static void msgbox_create(void)
 {
     //static const char * btns[] = {"Ok", "Cancel", ""};
     //lv_obj_t * mbox = lv_msgbox_create(NULL, "Hi", "Welcome to the keyboard and encoder demo", btns, false);
-    static const char * btns[] = {"Ok", "Nok", ""};                                                           // modified 
-    lv_obj_t * mbox = lv_msgbox_create(NULL, "Hi", "Welcome to the keyboard and encoder demo", btns, false);  // modified
+    static const char * btns[] = {"Ok", "NOK", ""};                                                           // modified 
+    lv_obj_t * mbox = lv_msgbox_create(NULL, "Hi. Welcome to the", "keyboard and encoder demo", btns, false);  // modified
     lv_obj_add_event_cb(mbox, msgbox_event_cb, LV_EVENT_ALL, NULL);
     lv_group_focus_obj(lv_msgbox_get_btns(mbox));
     lv_obj_add_state(lv_msgbox_get_btns(mbox), LV_STATE_FOCUS_KEY);
     lv_group_focus_freeze(g, true);
+    lv_obj_set_size(mbox, 120, 100);                // new
 
     lv_obj_align(mbox, LV_ALIGN_CENTER, 0, 0);
 

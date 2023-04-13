@@ -174,7 +174,7 @@ static void msgbox_create(void)
     lv_group_focus_obj(lv_msgbox_get_btns(mbox));
     lv_obj_add_state(lv_msgbox_get_btns(mbox), LV_STATE_FOCUS_KEY);
     lv_group_focus_freeze(g, true);
-    lv_obj_set_size(mbox, 130, 100); // new
+    lv_obj_set_size(mbox, 120, 100);                // new
 
     lv_obj_align(mbox, LV_ALIGN_CENTER, 0, 0);
 
