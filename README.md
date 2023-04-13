@@ -186,11 +186,14 @@ public:
   - different rotation : modify the line "#define SCREEN_ROTATION **0**"
   - try other demo or example : uncomment **ONE** of the lines starting with "lv_demo_" or "lv_example_"
 
-LVGL_Arduino_rx1.8 with rotation 0
-![LVGL](pictures/LVGL_Widgets.jpg)
+LVGL_Arduino_rx1.8 with rotation 0 (lv_demo_widgets.c modified)
+![LVGL](pictures/LVGL_Widget_R0_Profile.JPG)
+
+LVGL_Arduino_rx1.8 with rotation 3 (lv_demo_widgets.c modified)
+![LVGL](pictures/LVGL_Widget_R3_Analytics.JPG)
 
 LVGL_Arduino_rx1.8 with rotation 0 (lv_demo_widgets.c not modified)
-![LVGL](pictures/LVGL_Widgets_02.jpg)
+![LVGL](pictures/LVGL_Widget_R3_Analytics.JPG)
 
 
 LVGL_Arduino_rx with rotation 0 and lv_example_btn_1();
@@ -239,6 +242,8 @@ Test PlatformIO with the TFT_eSPI graphicstest example :
   - Edit in "platformio.ini" monitor_port=COM13 
 - Upload (Press 
  ![PlatfomIO](pictures/PlatformIO_Bottom_Arrow.jpg) ) 
+
+![TFT_eSPI](pictures/ScreenShot_PlatformIO.jpg)
 
 Use PlatformIO with the LVGL Arduino Demo :
 
