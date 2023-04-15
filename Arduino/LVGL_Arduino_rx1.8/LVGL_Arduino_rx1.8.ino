@@ -1,5 +1,5 @@
 // This the original LVGL_demo.ino 8.3.6 with all modifications i needed to compile without errors and 
-// get the touch working correctly with Arduino IDE 2.0.4 , TFT_eSPI and ST7735 1.8".
+// get the touch working correctly with Arduino IDE 2.0.4 , TFT_eSPI and ili9341.
 
 /*Using LVGL with Arduino requires some extra steps:
  *Be sure to read the docs here: https://docs.lvgl.io/master/get-started/platforms/arduino.html  */
@@ -12,23 +12,34 @@
  Note that the `lv_examples` library is for LVGL v7 and you shouldn't install it for this version (since LVGL v8)
  as the examples and demos are now part of the main LVGL library. */
 
-#include <demos/lv_demos.h>                               //!! lvgl/src/demos
-#include <examples/lv_examples.h>                         //!! lvgl/src/examples
+#include <demos/lv_demos.h>                                 //!! lvgl/src/demos
+#include <examples/lv_examples.h>                           //!! lvgl/src/examples
 
-#define SCREEN_ROTATION 1                                 // set the screen rotation
+// Only for PlatformIO. PlatformIO doesn't find *.c files in subdirectories ? Arduino IDE does. 
+#ifdef PLATFORMIO
+  #include <examples/widgets/btn/lv_example_btn_1.c>
+  #include <examples/widgets/msgbox/lv_example_msgbox_1.c>
+  #include <examples/widgets/menu/lv_example_menu_1.c>
+  #include <examples/widgets/tabview/lv_example_tabview_1.c>
+  #include <examples/get_started/lv_example_get_started_1.c>
+  // ...
+#endif
+
+#define SCREEN_ROTATION 1                                   // set the screen rotation
 
 /*Change to your screen resolution*/
 #if (SCREEN_ROTATION == 1) || (SCREEN_ROTATION == 3)
-  static const uint16_t screenWidth  = 160;               // rotation 1 or 3
+  static const uint16_t screenWidth  = 160;                 // rotation 1 or 3
   static const uint16_t screenHeight = 128;
 #else  
-  static const uint16_t screenWidth  = 128;               // rotation 0 or 2
+  static const uint16_t screenWidth  = 128;                 // rotation 0 or 2
   static const uint16_t screenHeight = 160;
 #endif
 
+#define SIZE_SCREEN_BUFFER screenWidth * screenHeight / 1   // set screen buffer size
+//#define SIZE_SCREEN_BUFFER screenWidth * 10               // smaller if build error
 static lv_disp_draw_buf_t draw_buf;
-static lv_color_t buf[ screenWidth * screenHeight / 4 ];  // screen buffer size
-//static lv_color_t buf[ screenWidth * 10 ];              // smaller if compile error
+static lv_color_t buf[ SIZE_SCREEN_BUFFER ];
 
 TFT_eSPI tft = TFT_eSPI(screenWidth, screenHeight);
 
@@ -123,7 +134,8 @@ void setup()
     
     tft.setTouch( calData );
 
-    lv_disp_draw_buf_init( &draw_buf, buf, NULL, screenWidth * 10 );
+    //lv_disp_draw_buf_init( &draw_buf, buf, NULL, screenWidth * 10 );
+    lv_disp_draw_buf_init( &draw_buf, buf, NULL, SIZE_SCREEN_BUFFER );    // set Screen Buffer
 
     /*Initialize the display*/
     static lv_disp_drv_t disp_drv;  //!!modified
@@ -149,16 +161,19 @@ void setup()
     lv_obj_align( label, LV_ALIGN_CENTER, 0, 0 );
 #else
     // *** uncomment only **ONE** of these lines ( examples or demos ) ***
+
+    // PlatformIO doesn't find the .c files in subdirectories. Arduino IDE does. 
+    // see above : #include <examples/...
     
     // lv_example_btn_1();            
     // lv_example_msgbox_1();
     // lv_example_menu_1();
-    // lv_example_tabview_();
+    // lv_example_tabview_1();
     // lv_example_get_started_1();
     // ... ( more examples in folder Arduino\libraries\lvgl\src\examples\ )
 
-    lv_demo_widgets();            // OK ( OK = enabled in Arduino/libraries/lv_conf.h )
-    // lv_demo_benchmark();          // OK
+    lv_demo_widgets();               // OK ( OK = enabled in lv_conf.h or platform.ini)
+    // lv_demo_benchmark();          // OK, Rotation 0, maximum buffer, weighted FPS : 107fps
     // lv_demo_keypad_encoder();     // OK works, but I haven't an encoder
     // lv_demo_music();              // NOT TESTED
     // lv_demo_printer();            // MISSING

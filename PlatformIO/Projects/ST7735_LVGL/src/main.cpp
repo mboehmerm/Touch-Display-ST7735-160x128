@@ -15,15 +15,17 @@
 #include <demos/lv_demos.h>                                 //!! lvgl/src/demos
 #include <examples/lv_examples.h>                           //!! lvgl/src/examples
 
-// PlatformIO doesn't find .c files in subdirectories ? Arduino IDE does. 
-#include <examples/widgets/btn/lv_example_btn_1.c>
-#include <examples/widgets/msgbox/lv_example_msgbox_1.c>
-#include <examples/widgets/menu/lv_example_menu_1.c>
-#include <examples/widgets/tabview/lv_example_tabview_1.c>
-#include <examples/get_started/lv_example_get_started_1.c>
-// ...
+// Only for PlatformIO. PlatformIO doesn't find *.c files in subdirectories ? Arduino IDE does. 
+#ifdef PLATFORMIO
+  #include <examples/widgets/btn/lv_example_btn_1.c>
+  #include <examples/widgets/msgbox/lv_example_msgbox_1.c>
+  #include <examples/widgets/menu/lv_example_menu_1.c>
+  #include <examples/widgets/tabview/lv_example_tabview_1.c>
+  #include <examples/get_started/lv_example_get_started_1.c>
+  // ...
+#endif
 
-#define SCREEN_ROTATION 3                                   // set the screen rotation
+#define SCREEN_ROTATION 0                                   // set the screen rotation
 
 /*Change to your screen resolution*/
 #if (SCREEN_ROTATION == 1) || (SCREEN_ROTATION == 3)
@@ -34,9 +36,10 @@
   static const uint16_t screenHeight = 160;
 #endif
 
+#define SIZE_SCREEN_BUFFER screenWidth * screenHeight / 1   // set screen buffer size
+//#define SIZE_SCREEN_BUFFER screenWidth * 10               // smaller if build error
 static lv_disp_draw_buf_t draw_buf;
-static lv_color_t buf[ screenWidth * screenHeight / 4 ];    // screen buffer size
-//static lv_color_t buf[ screenWidth * 10 ];                // smaller if compile error
+static lv_color_t buf[ SIZE_SCREEN_BUFFER ];
 
 TFT_eSPI tft = TFT_eSPI(screenWidth, screenHeight);
 
@@ -131,7 +134,8 @@ void setup()
     
     tft.setTouch( calData );
 
-    lv_disp_draw_buf_init( &draw_buf, buf, NULL, screenWidth * 10 );
+    //lv_disp_draw_buf_init( &draw_buf, buf, NULL, screenWidth * 10 );
+    lv_disp_draw_buf_init( &draw_buf, buf, NULL, SIZE_SCREEN_BUFFER );    // set Screen Buffer
 
     /*Initialize the display*/
     static lv_disp_drv_t disp_drv;  //!!modified
@@ -157,7 +161,7 @@ void setup()
     lv_obj_align( label, LV_ALIGN_CENTER, 0, 0 );
 #else
     // *** uncomment only **ONE** of these lines ( examples or demos ) ***
-    
+
     // PlatformIO doesn't find the .c files in subdirectories. Arduino IDE does. 
     // see above : #include <examples/...
     
@@ -169,7 +173,7 @@ void setup()
     // ...
 
     lv_demo_widgets();               // OK ( OK = enabled in lv_conf.h or platform.ini)
-    // lv_demo_benchmark();          // OK
+    // lv_demo_benchmark();          // OK, Rotation 0, maximum buffer, weighted FPS : 107fps
     // lv_demo_keypad_encoder();     // OK works, but I haven't an encoder
     // lv_demo_music();              // TOO BIG ? (disabled in platform.ini)
     // lv_demo_printer();            // MISSING
